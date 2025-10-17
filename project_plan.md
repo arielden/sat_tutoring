@@ -31,7 +31,7 @@
 ### 1.1 Requirements Analysis (4-5 hours)
 
 - Document detailed functional requirements (2h)
-- Analyze Blue Book app reference (1h)
+- Analyze SAT examns / Blue Book app for reference (1h)
 - Define question format and data structure (1-2h)
 
 ### 1.2 Project Setup & Tools (3-4 hours)
@@ -45,7 +45,7 @@
 
 - Create technical specification document (2h)
 - Define database schema for questions (1.5h)
-- Plan API endpoints and data flow (1.5-2h)
+- Plan API endpoints and data flow (2.5-3h)
 
 ### Deliverables
 
@@ -53,6 +53,7 @@
 - ✓ Technical specification
 - ✓ Project timeline with milestones
 - ✓ Development environment ready
+- ✓ Demo website locally deployed (10 - 20 questions)
 
 ---
 
@@ -75,19 +76,17 @@
 - Define state management strategy (1.5h)
 - Plan data persistence approach (0.5-1h)
 
-### 2.3 Client Review (4 hours)
+### 2.3 Review with John (3 hours)
 
-- Prepare design presentation (2h)
-- Client meeting and feedback session (1h)
-- Incorporate feedback and finalize design (1h)
+- Prepare design presentation (1h)
+- Incorporate feedback and finalize design (2h)
 
 ### Deliverables
 
 - ✓ Complete wireframes
 - ✓ High-fidelity mockups
-- ✓ System architecture document
 - ✓ Component structure diagram
-- ✓ Approved design direction
+- ✓ Approved design
 
 ---
 
@@ -117,7 +116,7 @@
 - Implement state management (Context/Redux) (3h)
 - Create question data parser (2h)
 - Build in-memory data storage (2h)
-- Load sample questions (from PDF) (1h)
+- Load sample questions (explore different formats) (1h)
 
 ### Deliverables
 
@@ -152,7 +151,6 @@
 ### 4.3 UI Polish (5 hours)
 
 - Animations and transitions (2h)
-- Loading states and feedback (1h)
 - Mobile responsiveness refinement (2h)
 
 ### Deliverables
