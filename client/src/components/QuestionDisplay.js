@@ -11,9 +11,13 @@ const QuestionDisplay = ({
   return (
     <div className="question-display">
       <div className="question-header">
-        <span className="question-number">{question.id}</span>
-        <span className="mark-review-icon">📝 Mark for Review</span>
-        <span className="bookmark-icon">🔖</span>
+        <div className="question-number">{question.id}</div>
+        <div className="question-meta">
+          <div className="question-info">
+            <div className="question-type">Multiple Choice</div>
+            <div className="difficulty-badge hard">Hard</div>
+          </div>
+        </div>
       </div>
       
       <div className="question-text">
@@ -28,7 +32,7 @@ const QuestionDisplay = ({
               showResult && result
                 ? option.id === result.correctAnswer
                   ? 'correct'
-                  : option.id === selectedAnswer && !result.isCorrect
+                  : option.id === selectedAnswer && !result.correct
                   ? 'incorrect'
                   : ''
                 : ''
@@ -40,6 +44,18 @@ const QuestionDisplay = ({
           </div>
         ))}
       </div>
+
+      {/* Result Display */}
+      {showResult && result && (
+        <div className="result-section">
+          <div className={`result-message ${result.correct ? 'correct' : 'incorrect'}`}>
+            {result.correct ? '✅ Correct!' : '❌ Incorrect'}
+          </div>
+          <div className="explanation">
+            <strong>Explanation:</strong> {result.explanation}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

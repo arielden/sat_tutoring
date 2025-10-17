@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import QuizHeader from './components/QuizHeader';
 import QuestionDisplay from './components/QuestionDisplay';
 import Timer from './components/Timer';
 import './App.css';
@@ -75,56 +74,78 @@ function App() {
 
   return (
     <div className="App">
-      <QuizHeader 
-        sectionTitle="Section 2, Module 1: Math"
-        timeRemaining={timeRemaining}
-        questionNumber={currentQuestionIndex + 1}
-        totalQuestions={questions.length}
-        onMarkForReview={handleMarkForReview}
-      />
-      
-      <div className="quiz-content">
-        <div className="question-section">
-          <QuestionDisplay
-            question={currentQuestion}
-            selectedAnswer={selectedAnswer}
-            onAnswerSelect={handleAnswerSelect}
-            showResult={showResult}
-            result={result}
-          />
+      <div className="quiz-layout">
+        {/* Top Navigation Bar */}
+        <div className="top-navigation">
+          <div className="nav-left">
+            <div className="section-title">Section 2, Module 2:</div>
+            <div className="section-subtitle">Math</div>
+          </div>
           
-          <div className="quiz-controls">
-            {!showResult ? (
-              <button 
-                className="submit-btn"
-                onClick={handleSubmit}
-                disabled={!selectedAnswer}
-              >
-                Submit Answer
-              </button>
-            ) : (
-              <div className="result-controls">
-                <div className={`result-message ${result.isCorrect ? 'correct' : 'incorrect'}`}>
-                  {result.isCorrect ? 'Correct!' : 'Incorrect'}
-                </div>
-                <div className="explanation">
-                  <strong>Explanation:</strong> {result.explanation}
-                </div>
-                {currentQuestionIndex < questions.length - 1 && (
-                  <button 
-                    className="next-btn"
-                    onClick={handleNext}
-                  >
-                    Next Question
-                  </button>
-                )}
-              </div>
-            )}
+          <div className="nav-center">
+            <Timer timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} />
+          </div>
+          
+          <div className="nav-right">
+            {/* Empty space for balanced layout */}
           </div>
         </div>
-        
-        <div className="timer-section">
-          <Timer timeRemaining={timeRemaining} setTimeRemaining={setTimeRemaining} />
+
+        {/* Main Content Area */}
+        <div className="quiz-content">
+          {/* Question Header Section */}
+          <div className="question-header-section">
+            <div className="question-number-badge">{currentQuestionIndex + 1}</div>
+            <button className="mark-review-button">
+              <span className="bookmark-icon">🏷️</span>
+              Mark for Review
+            </button>
+            <div className="progress-bar">
+              <div className="progress-segments">
+                {Array.from({length: questions.length}, (_, i) => (
+                  <div 
+                    key={i} 
+                    className={`progress-segment ${i <= currentQuestionIndex ? 'completed' : ''}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Question Content */}
+          <div className="question-section">
+            <QuestionDisplay
+              question={currentQuestion}
+              selectedAnswer={selectedAnswer}
+              onAnswerSelect={handleAnswerSelect}
+              showResult={showResult}
+              result={result}
+            />
+          </div>
+        </div>
+
+        {/* Bottom Navigation Bar */}
+        <div className="bottom-navigation">
+          <div className="question-info">
+            Question {currentQuestionIndex + 1} of {questions.length} <span className="dropdown-arrow">▼</span>
+          </div>
+          
+          <div className="nav-buttons">
+            <button 
+              className="nav-btn back-btn" 
+              disabled={currentQuestionIndex === 0}
+              onClick={() => setCurrentQuestionIndex(prev => Math.max(0, prev - 1))}
+            >
+              Back
+            </button>
+            <button 
+              className="nav-btn next-btn"
+              onClick={!showResult ? handleSubmit : handleNext}
+              disabled={!showResult && !selectedAnswer}
+            >
+              {!showResult ? 'Next' : (currentQuestionIndex < questions.length - 1 ? 'Next' : 'Finish')}
+            </button>
+          </div>
         </div>
       </div>
     </div>

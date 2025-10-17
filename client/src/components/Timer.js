@@ -34,6 +34,7 @@ const Timer = ({ timeRemaining, setTimeRemaining }) => {
     <div className={getTimeClass()}>
       <div className="timer-label">Time Remaining</div>
       <div className="timer-value">{formatTime(timeRemaining)}</div>
+      <button className="hide-button">Hide</button>
       {timeRemaining <= 300 && (
         <div className="timer-alert">⚠️ Time is running out!</div>
       )}
