@@ -322,7 +322,7 @@ Questions will be stored in JSON format with the following structure:
 
 ### Contingency
 
-An additional 10-15% buffer (12-21 hours) is recommended for unforeseen issues or scope adjustments.
+An additional 10-15% buffer (12-21 hours) for unforeseen issues or scope adjustments.
 
 ---
 
