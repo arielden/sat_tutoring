@@ -310,9 +310,8 @@ Questions will be stored in JSON format with the following structure:
 - Testing and bug fixes
 - Documentation
 - Deployment setup
-- Client training
 
-### Not Included (Additional Cost)
+### Not Included
 
 - Backend API development
 - Database setup and management
@@ -329,99 +328,31 @@ An additional 10-15% buffer (12-21 hours) is recommended for unforeseen issues o
 
 ## Risk Management
 
-### Identified Risks
-
-#### Scope Creep
-- **Risk:** Additional features requested mid-development
-- **Impact:** Timeline delays, budget overrun
-- **Mitigation:** Strict change request process, document all requirements upfront
-
-#### Browser Compatibility
-- **Risk:** Issues with older browsers
-- **Impact:** Additional testing/fixing time
-- **Mitigation:** Define browser support early, use polyfills
-
-#### Data Complexity
-- **Risk:** Complex question formats (images, equations)
-- **Impact:** Additional development time
-- **Mitigation:** Clarify question format requirements early
 
 ### Dependencies
 
-#### From Client
-- Timely feedback on designs (within 3 business days)
+#### From John
 - Complete question content in agreed format
 - Access to hosting credentials (if required)
-- Availability for review meetings
 - Domain name (if needed)
 
 #### External Dependencies
 - Third-party service availability (hosting)
 - Library/framework updates
-- Internet connectivity for testing
-- Development tool licenses
 
 ### Assumptions
 
 - Questions will be text-based with optional simple formatting
-- No backend database required (client-side storage acceptable)
 - Single admin user (no multi-user management)
-- Desktop and mobile support (iOS/Android latest versions)
 - English language only
 - No real-time collaboration features
 
 ---
 
-## Payment Schedule
-
-| Payment | Milestone | Timing | Percentage |
-|---------|-----------|--------|------------|
-| 1st | Project kickoff - Upon contract signing | Day 1 | 25% |
-| 2nd | Design approval & Core development start | End of Week 2 | 25% |
-| 3rd | Core functionality demo delivered | End of Week 4 | 25% |
-| 4th | Final delivery & deployment complete | End of Week 8 | 25% |
-
-### Payment Terms
-
-- Net 7 days from invoice date
-- Invoices sent via email
-- Accepted methods: Bank transfer, PayPal
-- Late payment: Work pause after 14 days
-
-### Project Guarantees
-
-- 30-day bug fix warranty
-- Weekly progress updates
-- Client review at each milestone
-- Source code ownership transfer
-
-### Hourly Rate Calculation Example
-
-Based on estimated hours: 120-143h
-
-- **At $50/hour:** $6,000 - $7,150
-- **At $75/hour:** $9,000 - $10,725
-- **At $100/hour:** $12,000 - $14,300
-
-> **Note:** Actual pricing to be determined based on your hourly rate and final scope agreement. Additional features beyond original scope will be quoted separately.
 
 ---
 
 ## Next Steps
-
-### Immediate Action Items
-
-1. **Review & Approve Proposal**
-   - Review this development plan and provide feedback
-
-2. **Finalize Requirements**
-   - Confirm all features, scope, and technical requirements
-
-3. **Sign Contract & Invoice**
-   - Execute agreement and process initial payment (25%)
-
-4. **Project Kickoff**
-   - Schedule kickoff meeting and begin Milestone 1
 
 ### Questions to Clarify
 
@@ -435,17 +366,8 @@ Based on estimated hours: 120-143h
 ### Documents Needed
 
 - Sample question set (formatted)
-- Branding guidelines (if any)
 - Hosting credentials
 - Domain information
-- Any existing design assets
-
----
-
-## Contact Information
-
-**Email:** your-email@example.com  
-**Phone:** +XX XXX XXX XXXX
 
 ---
 
